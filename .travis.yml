@@ -12,5 +12,5 @@ scripts:
 after_success:
   - docker build -t kuldeepaujla/react-docker .
 
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USER"
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USER" --password-stdin
   - docker push kuldeepaujla/react-docker
